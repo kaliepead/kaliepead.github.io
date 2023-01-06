@@ -1,4 +1,12 @@
 
+body {
+    background-image:url('Assets/Website\ Editing\ Page\ Holder\ GIF.gif');
+    background-size:100%;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    height:100%;
+    width:100%;
+}
 
 h1, h2, .skills-list{
     font-family: 'Inknut Antiqua', serif;
