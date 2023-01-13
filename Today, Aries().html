@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Today, Aries().css">
+    <title>Today, Aries (    )</title>
+</head>
+<body>
+    <p class="first">Words</p>
+        <div class="image-container"><img src=".//Assets/today, Aries ( ) (1).svg" alt="An lavender frame that mimics an empty tarot card with two hands shuffling cards at the bottom of the frame. The text reads 'Today, Aries (    ).">
+         </div>
+    <p class ="year">Year</p>
+
+    <button onclick="gentext(); genYear()" class="btn" id="btn">Pull Cards</button>
+
+    <script>
+        function gentext(){
+            var word = ["Reversed—a woman,is neither the swords  or a body of water. Her path is that clear-cut moon to her right. Reversed—someone else moves the colour background barren except there is none.Reversed—youre dreaming—stuck back—someone call Peter Pan.", "Reversed—the seed in the early stages. Let the void run or you appear. Nearby, on the hill, the grassy hills, the river marks  the end. It brings you pop bliss. Reversed—a golden cup of fish moves slowly except for where a golden cup is charging forward.", "Reversed—women dancing in the airbound by that clicking. Within you a hand sprouting from  the mountains—the horizon rolling along. Reversed—decorated lions In her left hand, sunflowers in her right. She invites your senses. Now, you hear.", "Reversed— rocky Lightning strikes, head first—a sudden surge desperate to escape the Tree of Life. Its dramatic and you know it. Ask yourself: who blindfolded the open space? Barren land—grey sky bound to other people. I speak—and it is pouring from the horizon.", "Reversed—indirect face between a horse  and a homecoming --prodigal feminine heart, your  exhausted battleswill be wanted. Reversed—you've arrived at something else. This never-ending black hole.", "Reversed—inter communications. Isolation counter counsels with enough human contact, preferably close to completely ineffective. Anyone is a weekend escape. Reversed—flowers stooping down, she walks away. White flowers inside the girl, flowers passing with the undertow—Lingering nostalgia finally digested a curious mind and sand castles. A hand emerging from the garden. You turn into something real, or windfall."];
+            var para=document.querySelector('.first');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+            function genYear(){
+            var year = ["1993", "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023"];
+            var para=document.querySelector('.year');
+            para.innerHTML=year[Math.floor(Math.random() * year.length)];
+        }
+    </script>
+</body>
+</html>
