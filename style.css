@@ -325,6 +325,26 @@ a:active { text-decoration: none; }
   }
   }
 
+  /*EXQUISITE CORPORA*/
+  .bg-image-3{
+    background-image: url('./Assets/Exquisite\ Corpora\ resize.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment:fixed;
+  }
+.tweet-box{
+  display: block;
+  top: 150px;
+  flex-direction: column;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.twitter-timeline {
+
+  width: 50vw !important;
+}
 /* button {
   border: none;
   cursor: pointer;
