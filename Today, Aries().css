@@ -1,5 +1,5 @@
 body {
-    background-color: #E9DCD9;
+    background-color: #024440;
 }
 
 .image-container img{
@@ -15,7 +15,7 @@ width: 400px;
     width: 120px;
     font-size: 12px;
     border-radius: 12px;
-    border-color: #698DF4;
+    border-color: #024440;
     border-style:double;
     background-color: #E9DCe0;
 }
@@ -35,6 +35,7 @@ width: 400px;
     margin-left: 110px;
     margin-top: 140px;
     font-family: 'Times New Roman', Times, serif;
+    color: white;
 }
 
     .year{
@@ -43,4 +44,5 @@ width: 400px;
         position: absolute;
         top: 17px;
         left: 265px;
+        color: white;
     }
