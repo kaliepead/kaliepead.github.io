@@ -329,7 +329,7 @@ a:active { text-decoration: none; }
   .bg-image-3{
     background-image: url('./Assets/Exquisite\ Corpora\ resize.png');
     background-size: cover;
-    background-repeat: ;
+    background-repeat: no-repeat;
     background-position: center;
     background-attachment:fixed;
   }

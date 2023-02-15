@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="TheTrain.css">
+    <title>The_Train</title>
+</head>
+<body background="./Assets/Train Poem Backgrounds.svg">
+    <p class="Isa">Isa</p>
+    <p class ="Eddie">Eddie</p>
+    <p class="Paul">Paul</p>
+    <p class="Grace">Grace</p>
+    <p class ="Mackenzie">Mackenzie</p>
+    <p class ="Regan">Regan</p>
+    <p class="Caroline">Caroline</p>
+    <p class="maryKate">Mary Kate</p>
+    <p class="Zora">Zora</p>
+    <p class="Henry">Henry</p>
+    <p class="Katherine">Katherine</p>
+    <p class="Thacher">Thacher</p>
+    <p class="Paige">Paige</p>
+    <p class="Eva">Eva</p>
+    <p class="Haley">Haley</p>
+
+
+    <p class="PaulOne">Paul</p>
+    <p class ="MackenzieOne">Mackenzie</p>
+    <p class ="ReganOne">Regan</p>
+    <p class ="EddieOne">Eddie</p>
+    <p class="HaleyOne">Haley</p>
+    <p class="ZoraOne">Zora</p>
+    <p class="EvaOne">Eva</p>
+    <p class="HenryOne">Henry</p>
+    <p class="KatherineOne">Katherine</p>
+    <p class="IsaOne">Isa</p>
+    <p class="ThacherOne">Thacher</p>
+    <p class="GraceOne">Grace</p>
+    <p class="PaigeOne">Paige</p>
+    <p class="CarolineOne">Caroline</p>
+    <p class="maryKateOne">Mary Kate</p>
+
+
+
+
+    <button onclick="genPaul(); genMackenzie(); genRegan(); genEddie(); genCaroline(); genEva(); genGrace(); genHaley(); genHenry(); genIsa(); genKatherine(); genPaige(); genPaul(); genThacher(); genZora(); genmaryKate(); genPaulOne(); genMackenzieOne(); genReganOne(); genEddieOne(); genCarolineOne(); genEvaOne(); genGraceOne(); genHaleyOne(); genHenryOne(); genIsaOne(); genKatherineOne(); genPaigeOne(); genPaulOne(); genThacherOne(); genZoraOne(); genmaryKateOne()" class="btn" id="btn">Create Poem</button>
+
+    <script>
+        function genPaul(){
+            var word = ["As I see you at first", "I can't help but ponder", "Of all the places you've been", "Oh boy, what a wonder!", "Have you seen a tree", "Oh I bet you have", "Many more than me", "It'd probably make me laugh", "Have you seen the sea", "The beautiful deep blue", "All the creatues it holds", "I've seen some too", "Have you seen another country", "Oh how many there are", "Now that would surprise me", "I bet those are too far", "Well I hope you see more", "Before the end of your days", "Oh the beauty of this world", "You should meet with your gaze",];
+            var para=document.querySelector('.Paul');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+        function genMackenzie(){
+            var word = ["Buying another Southshore ticket", "Millenium Station to South Bend Airport", "Sometimes South Bend Airport to Millenium Stations", "It's just $14", "Hop on the Southshore with me to South Bend", "Let's take the train back in the morning", "It's just $14", "I could drive but gas is too expensive right now", "It's only $14", "Cheaper than filling up", "I'll take the South Shore and do work on the ride", "I miss you", "I have the day off", "Should I just spend the $14?", "Take the morning train and we can have lunch together", "Don't leave yet", "Just tell your ride to go back home without you", "You can take the late train", "It's just $14", "Maybe we should've bought the train pass",];
+            var para=document.querySelector('.Mackenzie');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+        function genRegan(){
+            var word = ["I don't take the train", "anymore. I used to take it", "everyday, riding in my", "school uniform with all of the", "suits commuting downtown", "I'll take the train.", "Again. Soon. When I am a", "suit, chugging along. The", "corporate world always", "taking the same track", "I wish I could fly." ];
+            var para=document.querySelector('.Regan');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+        function genEddie(){
+            var word = ["the will of a train", "we hear it go by fast", "its chaos and brutality", "make a formidable force", "it only stops when it wants", "stays true to a single path", "how hard that must be...", "that consistency is rare", "the dedication even moreso", "how admirable that is",];
+            var para=document.querySelector('.Eddie');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+        function genHaley(){
+            var word = ["Summer coming home", "a misty fog hung low", "trains rush by", "one by one", "Where to?", "Nowhere to go but somehow", "everywhere to go", "the trains pass one by one", "gushes of wind whip me upright", "from the speeding trains", "passing by in a blink of an eye", "as I stand I stare", "At all of the unfamiliar faces", "Rushing, hustling, to get", "to their unknown destinations", "What for?", "The hurry and the rush and the speed", "all for the money and time spent away", "from the people who you love the most", "The trains pass by one by one", "I am going home."];
+            var para=document.querySelector('.Haley');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+        function genZora(){
+            var word = ["The sun peeks over the horizon as we board", "Dad squeezes my little and when it takes off", "He shows me our broadway tickets for tonight", "Matilda on the big stage!", "A wave of anticipation surges through my body", "I drift off in his arms", "safe and sound", "A tiny seed in the big apple"];
+            var para=document.querySelector('.Zora');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+        function genHenry(){
+            var word = ["I don't really like trains", "The endless noise at each crossing", "Waiting for the train to pass", "Nobody enjoys waiting for a train.", "They've made me late to school.", "They've made me late to school.", "They've made me late to work.", "At least a train makes for a good excuse.", "This is why I don't like trains."];
+            var para=document.querySelector('.Henry');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+        function genKatherine(){
+            var word = ["Squeals and lurches of brakes curdling the popcorn in my stomach,", "stretched vinyl seats chafing my bare thighs", "screeching laughs wandering through the cars, unafraid to be heard", "My hair frizz catches on my stiff collar", "my mother's hand clutches mine,sweating", "my cautious gaze meets that of a hooded stranger, unbothered by my attention", "the alphabet grocery store game dances through my head, A for apple, B for bananas?", "The mechanical voice of each stop ringing through my head,", "the hushed urgency of the train haunting me long after I crossed the yellow line.", "Going, going, gone."];
+            var para=document.querySelector('.Katherine');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+        function genIsa(){
+            var word = ["All around, I see", "shutting doors separate knowing smiles,", "slapping tamarind farewells onto", "tiny postcards of lonely isles", "Once aboard, I feel", "whispers of windows who promise pain,", "painting passing trees with", "watercolor smudges of new terrain.", "Already warm, I swipe", "Similar smudges down my own face,", "tasting salty saline from", "eyes that long for yours to gaze", "From outside, I witness", "tiny branches sprawl and unfold", "capturing velvet nighttime, the", "hands of lovers that seek to hold.", "In fear, I wonder", "could couples across hear,", "hammering hearts from", "fools like me, who fear saying", "goodbye to what's always been near?"];
+            var para=document.querySelector('.Isa');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+        function genThacher(){
+            var word = ["Black horse,", "breathing with such vigor and rhythm", "with the strength you possess", "your prowess is a given", "for industry follows you", "but you are one to chase it", "why did she use you", "was I too complacent", "A last-ditch escape", "through the cloack of the night", "on your saddle she rode", "then she was out of my sight", "for my own horse was too slow", "to go and change your mind", "the gifts of the black horse", "Seem to take all of mine",];
+            var para=document.querySelector('.Thacher');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+        function genmaryKate(){
+            var word = ["pause"];
+            var para=document.querySelector('.maryKate');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+        function genEva(){
+            var word = ["pause"];
+            var para=document.querySelector('.Eva');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+        function genCaroline(){
+            var word = ["pause"];
+            var para=document.querySelector('.Caroline');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+        function genGrace(){
+            var word = ["pause"];
+            var para=document.querySelector('.Grace');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+        function genPaige(){
+            var word = ["pause"];
+            var para=document.querySelector('.Paige');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+        function genPaulOne(){
+            var word = ["As I see you at first", "I can't help but ponder", "Of all the places you've been", "Oh boy, what a wonder!", "Have you seen a tree", "Oh I bet you have", "Many more than me", "It'd probably make me laugh", "Have you seen the sea", "The beautiful deep blue", "All the creatues it holds", "I've seen some too", "Have you seen another country", "Oh how many there are", "Now that would surprise me", "I bet those are too far", "Well I hope you see more", "Before the end of your days", "Oh the beauty of this world", "You should meet with your gaze",];
+            var para=document.querySelector('.PaulOne');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+        function genMackenzieOne(){
+            var word = ["Buying another Southshore ticket", "Millenium Station to South Bend Airport", "Sometimes South Bend Airport to Millenium Stations", "It's just $14", "Hop on the Southshore with me to South Bend", "Let's take the train back in the morning", "It's just $14", "I could drive but gas is too expensive right now", "It's only $14", "Cheaper than filling up", "I'll take the South Shore and do work on the ride", "I miss you", "I have the day off", "Should I just spend the $14?", "Take the morning train and we can have lunch together", "Don't leave yet", "Just tell your ride to go back home without you", "You can take the late train", "It's just $14", "Maybe we should've bought the train pass",];
+            var para=document.querySelector('.MackenzieOne');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+        function genReganOne(){
+            var word = ["I don't take the train", "anymore. I used to take it", "everyday, riding in my", "school uniform with all of the", "suits commuting downtown", "I'll take the train.", "Again. Soon. When I am a", "suit, chugging along. The", "corporate world always", "taking the same track", "I wish I could fly." ];
+            var para=document.querySelector('.ReganOne');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+        function genEddieOne(){
+            var word = ["the will of a train", "we hear it go by fast", "its chaos and brutality", "make a formidable force", "it only stops when it wants", "stays true to a single path", "how hard that must be...", "that consistency is rare", "the dedication even moreso", "how admirable that is",];
+            var para=document.querySelector('.EddieOne');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+        function genHaleyOne(){
+            var word = ["Summer coming home", "a misty fog hung low", "trains rush by", "one by one", "Where to?", "Nowhere to go but somehow", "everywhere to go", "the trains pass one by one", "gushes of wind whip me upright", "from the speeding trains", "passing by in a blink of an eye", "as I stand I stare", "At all of the unfamiliar faces", "Rushing, hustling, to get", "to their unknown destinations", "What for?", "The hurry and the rush and the speed", "all for the money and time spent away", "from the people who you love the most", "The trains pass by one by one", "I am going home."];
+            var para=document.querySelector('.HaleyOne');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+        function genZoraOne(){
+            var word = ["The sun peeks over the horizon as we board", "Dad squeezes my little and when it takes off", "He shows me our broadway tickets for tonight", "Matilda on the big stage!", "A wave of anticipation surges through my body", "I drift off in his arms", "safe and sound", "A tiny seed in the big apple"];
+            var para=document.querySelector('.ZoraOne');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+        function genHenryOne(){
+            var word = ["I don't really like trains", "The endless noise at each crossing", "Waiting for the train to pass", "Nobody enjoys waiting for a train.", "They've made me late to school.", "They've made me late to school.", "They've made me late to work.", "At least a train makes for a good excuse.", "This is why I don't like trains."];
+            var para=document.querySelector('.HenryOne');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+        function genKatherineOne(){
+            var word = ["Squeals and lurches of brakes curdling the popcorn in my stomach,", "stretched vinyl seats chafing my bare thighs", "screeching laughs wandering through the cars, unafraid to be heard", "My hair frizz catches on my stiff collar", "my mother's hand clutches mine,sweating", "my cautious gaze meets that of a hooded stranger, unbothered by my attention", "the alphabet grocery store game dances through my head, A for apple, B for bananas?", "The mechanical voice of each stop ringing through my head,", "the hushed urgency of the train haunting me long after I crossed the yellow line.", "Going, going, gone."];
+            var para=document.querySelector('.KatherineOne');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+        function genIsaOne(){
+            var word = ["All around, I see", "shutting doors separate knowing smiles,", "slapping tamarind farewells onto", "tiny postcards of lonely isles", "Once aboard, I feel", "whispers of windows who promise pain,", "painting passing trees with", "watercolor smudges of new terrain.", "Already warm, I swipe", "Similar smudges down my own face,", "tasting salty saline from", "eyes that long for yours to gaze", "From outside, I witness", "tiny branches sprawl and unfold", "capturing velvet nighttime, the", "hands of lovers that seek to hold.", "In fear, I wonder", "could couples across hear,", "hammering hearts from", "fools like me, who fear saying", "goodbye to what's always been near?"];
+            var para=document.querySelector('.IsaOne');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+        function genThacherOne(){
+            var word = ["Black horse,", "breathing with such vigor and rhythm", "with the strength you possess", "your prowess is a given", "for industry follows you", "but you are one to chase it", "why did she use you", "was I too complacent", "A last-ditch escape", "through the cloack of the night", "on your saddle she rode", "then she was out of my sight", "for my own horse was too slow", "to go and change your mind", "the gifts of the black horse", "Seem to take all of mine",];
+            var para=document.querySelector('.ThacherOne');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+        function genmaryKateOne(){
+            var word = ["pause"];
+            var para=document.querySelector('.maryKateOne');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+        function genEvaOne(){
+            var word = ["pause"];
+            var para=document.querySelector('.EvaOne');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+        function genCarolineOne(){
+            var word = ["pause"];
+            var para=document.querySelector('.CarolineOne');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+        function genGraceOne(){
+            var word = ["pause"];
+            var para=document.querySelector('.GraceOne');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+        function genPaigeOne(){
+            var word = ["pause"];
+            var para=document.querySelector('.PaigeOne');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+    </script>
+</body>
+</html>
