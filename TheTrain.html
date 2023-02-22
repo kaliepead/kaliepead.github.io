@@ -24,10 +24,92 @@
     <p class="Eva">Eva</p>
     <p class="Haley">Haley</p>
 
-    <button onclick="genPaul(); genMackenzie(); genRegan(); genEddie(); genCaroline(); genEva(); genGrace(); genHaley(); genHenry(); genIsa(); genKatherine(); genPaige(); genPaul(); genThacher(); genZora(); genmaryKate()" class="btn" id="btn">Create Poem</button>
+    <button onclick="genEddie(); genCaroline(); genEva(); genGrace(); genHaley(); genHenry(); genPaul(); genMackenzie(); genRegan(); genIsa(); genKatherine(); genPaige(); genPaul(); genThacher(); genZora(); genmaryKate()" class="btn" id="btn">Create Poem</button>
 
     <script>
+
+        function genEddie(){
+            var word = ["It hits you from all sides", "One may long for the contact", "You get so used to it", "In its absence, you suffer", "You wait, and wait, and wait", "And then the wounds appear", "You are grounded in reality once again", "Hidden by the rush and the moment", "You did not feel them instantly", "But now that the hitting has ceased", "You feel them eternally", "They will become scars", "scars that tell the story of your heart",];
+            var para=document.querySelector('.Eddie');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+        function genHaley(){
+            var word = ["Summer coming home, a misty fog hung low", "trains rush by, one by one", "Where to?, Nowhere to go but somehow", "everywhere to go, the trains pass one by one", "gushes of wind whip me upright, from the speeding trains", "passing by in a blink of an eye, as I stand I stare", "At all of the unfamiliar faces, Rushing, hustling, to get", "to their unknown destinations, What for?", "The hurry and the rush and the speed, all for the money and time spent away", "from the people who you love the most, The trains pass by one by one", "I am going home."];
+            var para=document.querySelector('.Haley');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+    
         function genPaul(){
+            var word = ["As I see you at first, I can't help but ponder", "Of all the places you've been, Oh boy, what a wonder!", "Have you seen a tree, Oh I bet you have", "Many more than me, It'd probably make me laugh", "Have you seen the sea, The beautiful deep blue", "All the creatues it holds, I've seen some too", "Have you seen another country, Oh how many there are", "Now that would surprise me, I bet those are too far", "Well I hope you see more, Before the end of your days", "Oh the beauty of this world, You should meet with your gaze",];
+            var para=document.querySelector('.Paul');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+        function genMackenzie(){
+            var word = ["This frustrates me, that frustrates me, they frustrate me", "You give power to what you give attention to", "Change your thoughts", "Easier said than done","These things will never change", "So I must change?","Until then, I grow to despise these things", "I need to help myself"];
+            var para=document.querySelector('.Mackenzie');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+        function genRegan(){
+            var word = ["Always surrounded by people but always alone", "Constant crying cuts off as soon as she walks in the room", "A few concnerned looks, but most people have no idea", "I'm not coming back", "I tell them and they all act surprised", "They thought I as so busy so popular so put together", "I was always alone", "I am always alone."];
+            var para=document.querySelector('.Regan');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+
+        function genZora(){
+            var word = ["Devoid of emotions yet still overwhelmed", "Feeling nothing and everything", "I live detached from myself", "My soul stays home as I go about my day", "Where are the get well soon cards for mental illness?", "Must my struggle be physically visible for you to care?"];
+            var para=document.querySelector('.Zora');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+        function genHenry(){
+            var word = ["It comes before the highest of highs", "It can lead to the lowest of lows", "It's hard work", "It's dedication", "It's part of the crazy world we live in","I feel it, you feel it, we all feel it", "We all feel it because we care", "We care about succeeding", "Succeeding within a world marked by stress.",];
+            var para=document.querySelector('.Henry');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+        function genKatherine(){
+            var word = ["They always say that anger is hard, red, fast,that it swells up and bursts out,", "Its claws reaching out to scratch anyone in the vicinity", "They say that it blinds you, that it tears down walls and leaves everyone raw, open, gaping,", "permanently etching itself in the history of the earth.", "They never say that anger is an ocean, crashing softly at times", "Gently splashing your feet when you've forgotten that it was even there.", "They never say that it settles, underlying every calm memory, knocking the breath outof you,", "Jabbing itself in your side whenever you feel strong enough to stand upright",];
+            var para=document.querySelector('.Katherine');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+        function genIsa(){
+            var word = ["Two slim ladies are sunbathing on my eyelids", "Their bodies a slight pressure down", "Four strong wrestlers are wrapping across my limbs,", "Their tightness a whisper of ground.", "One tender child is tucked inside my head,", "Her sleepy snoring calling for company",];
+            var para=document.querySelector('.Isa');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+        function genThacher(){
+            var word = ["Black horse, breathing with such vigor and rhythm", "with the strength you possess, your prowess is a given", "for industry follows you, but you are one to chase it", "why did she use you, was I too complacent", "A last-ditch escape, through the cloak of the night", "on syour saddle she rode, then she was out of my sight", "for my own horse was too slow, to go and change your mind", "the gifts of the black horse, Seem to take all of mine",];
+            var para=document.querySelector('.Thacher');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+        function genmaryKate(){
+            var word = ["What do you do", "when your thoughts", "are too loud for this quiet world?", "When holding up your eyelids", "Becomes an ongoing battle.", "And when waking up with no light", "Makes you forget to miss it.", "You carry on.", "You hope that one day", "you can escape your mind,", "Open your eyes,", "And enjoy the light",];
+            var para=document.querySelector('.maryKate');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+        function genEva(){
+            var word = ["What have I just done?", "Just another one of life's challenges", "Thrown at me in one night.", "Have I made a bad decision?", "Only time shall tell.", "No one is happy about it,", "but it is my life, right?",];
+            var para=document.querySelector('.Eva');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+        function genCaroline(){
+            var word = ["Gnat, not, nag, snap", "The do-it-again-and-see-what-happens", "The day Thursday in itself", "Laughing at you crawl towards the weekend", "Irrationality - the loud gum chewers, the elongated talkers with a forced Chicago accent (we know you're from the suburbs)", "Pesky, pest, putrid, punk", "The resolution being to just take some time alone",];
+            var para=document.querySelector('.Caroline');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+        function genGrace(){
+            var word = ["Perhaps the greatest curse", "is the one of longing for something you cannot have", "Like an unrequited love", "Except in this case: another time", "When thinking about it", "your heart is full", "but when the memory fades", "You are left empty", "Take comfort in the fact", "We manipulate our memories", "The good always prevails", "Preserve them, cherish them, treasure them", "For you should be lucky to experience nostalgia", "again."];
+            var para=document.querySelector('.Grace');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+        function genPaige(){
+            var word = ["Life is like a train going down different tracks", "People coming and going", "I am the conductor", "Telling the train where to go, who to let on", "leaving those who get off behind, accepting those who join and taking them on my journey", "life is like a train, moving so fast until before you know it", "the breaks bring it to a stop,and the train has served its purpose",];
+            var para=document.querySelector('.Paige');
+            para.innerHTML=word[Math.floor(Math.random() * word.length)];
+        }
+    </script>
+</body>
+</html>
+<!--Train Poem
+ function genPaul(){
             var word = ["As I see you at first / I can't help but ponder", "Of all the places you've been / Oh boy, what a wonder!", "Have you seen a tree / Oh I bet you have", "Many more than me / It'd probably make me laugh", "Have you seen the sea / The beautiful deep blue", "All the creatues it holds / I've seen some too", "Have you seen another country / Oh how many there are", "Now that would surprise me / I bet those are too far", "Well I hope you see more / Before the end of your days", "Oh the beauty of this world / You should meet with your gaze",];
             var para=document.querySelector('.Paul');
             para.innerHTML=word[Math.floor(Math.random() * word.length)];
@@ -102,11 +184,8 @@
             var para=document.querySelector('.Paige');
             para.innerHTML=word[Math.floor(Math.random() * word.length)];
         }
-    </script>
-</body>
-</html>
 
-<!-- SECOND LINE SCRIPT
+ SECOND LINE SCRIPT
     
     
     <p class="PaulOne">Paul</p>

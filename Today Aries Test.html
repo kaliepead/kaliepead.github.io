@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Random Sentence Generator</h1>
+  <button id="generateButton">Generate Sentences</button>
+  <ul id="result"></ul>
+  <script>
+    const sentences = [
+      "The sky is blue",
+      "The sun is shining",
+      "The birds are singing",
+      "The flowers are blooming",
+      "The grass is green",
+      "The air is fresh",
+      "The leaves are rustling",
+    ];
+
+    const dependencies = {
+      "The sky is blue": "The sun is shining",
+      "The sun is shining": "The sky is blue",
+      "The flowers are blooming": "The sky is blue",
+      "The flowers are blooming": "The sun is shining",
+    };
+
+    let usedSentences = [];
+    let currentIteration = 0;
+
+    function generateSentences() {
+      let iterationSentences = sentences.map(sentence => `${sentence}-${currentIteration}`);
+
+      let candidates = iterationSentences.filter((sentence) => !usedSentences.includes(sentence));
+      let selected = [];
+
+      for (let i = 0; i < 3; i++) {
+        let idx = Math.floor(Math.random() * candidates.length);
+        let sentence = candidates[idx];
+        let originalSentence = sentence.slice(0, -(`-${currentIteration}`.length));
+        selected.push(originalSentence);
+        candidates.splice(idx, 1);
+
+        let dependency = dependencies[originalSentence];
+        if (dependency) {
+          let dependentSentence = `${dependency}-${currentIteration}`;
+          candidates = candidates.filter((s) => s !== dependentSentence);
+          usedSentences.push(dependentSentence);
+        }
+      }
+
+      usedSentences = usedSentences.concat(selected.map(sentence => `${sentence}-${currentIteration}`));
+      return selected;
+    }
+
+    document.querySelector("#generateButton").addEventListener("click", function () {
+      let sentences = generateSentences();
+      let result = document.querySelector("#result");
+      result.innerHTML = "";
+      sentences.forEach(function (sentence) {
+        let li = document.createElement("li");
+        li.textContent = sentence;
+        result.appendChild(li);
+      });
+
+      currentIteration = (currentIteration + 1) % sentences.length;
+      usedSentences = usedSentences.filter(sentence => sentence.endsWith(`-${currentIteration - 1}`));
+    });
+  </script>
+</body>
+</html>
+
+</body>
+</html>
