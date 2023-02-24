@@ -12,20 +12,27 @@
   <ul id="result"></ul>
   <script>
     const sentences = [
-      "The sky is blue",
-      "The sun is shining",
-      "The birds are singing",
-      "The flowers are blooming",
+      "Robe of smile eyes / dual sign roses / and lilies of light / one hand pointed to the sky / the other an infinite magician",
+      "Reversed—breadcrumb conduit / your cloak converted red / blossoming snake bite foliage / and unintentional touch",
+      "You lunar crescent head / embroidered palms / shimmering daughter of Eden / secret borrowed light",
+      "Reversed—surrender the resonate tune / veil of forced feminine perspective / the pomegranates sacred / Persephone ate the underworld",
       "The grass is green",
       "The air is fresh",
       "The leaves are rustling",
+      "Beyond Eden / a ripening field of stars / you / borne by a door / gathered in the cluster of words",
+      "Reversed—crushed velvet pomegranate / lush water wheat / rich curves reflect you / an ant resisting the body",
+      "Reversed—Shadow spotlight / crushes / flatters / you are indulged / The audience plays hide and seek.",
     ];
 
     const dependencies = {
-      "The sky is blue": "The sun is shining",
-      "The sun is shining": "The sky is blue",
-      "The flowers are blooming": "The sky is blue",
-      "The flowers are blooming": "The sun is shining",
+      "Robe of smile eyes / dual sign roses / and lilies of light / one hand pointed to the sky / the other an infinite magician": "Reversed—breadcrumb conduit / your cloak converted red / blossoming snake bite foliage / and unintentional touch",
+      "Reversed—breadcrumb conduit / your cloak converted red / blossoming snake bite foliage / and unintentional touch": "Robe of smile eyes / dual sign roses / and lilies of light / one hand pointed to the sky / the other an infinite magician",
+      "You lunar crescent head / embroidered palms / shimmering daughter of Eden / secret borrowed light": "Reversed—surrender the resonate tune / veil of forced feminine perspective / the pomegranates sacred / Persephone ate the underworld",
+      "Reversed—surrender the resonate tune / veil of forced feminine perspective / the pomegranates sacred / Persephone ate the underworld": "You lunar crescent head / embroidered palms / shimmering daughter of Eden / secret borrowed light",
+      "Beyond Eden / a ripening field of stars / you / borne by a door / gathered in the cluster of words": "Reversed—crushed velvet pomegranate / lush water wheat / rich curves reflect you / an ant resisting the body",
+      "Reversed—crushed velvet pomegranate / lush water wheat / rich curves reflect you / an ant resisting the body": "Beyond Eden / a ripening field of stars / you / borne by a door / gathered in the cluster of words",
+      "Mother / Mars adorned / small river in her right hand / gold crown mountain range in her left / She is red robe fantasy": "Reversed—Shadow spotlight / crushes / flatters / you are indulged / The audience plays hide and seek.",
+      "Reversed—Shadow spotlight / crushes / flatters / you are indulged / The audience plays hide and seek.": "Mother / Mars adorned / small river in her right hand / gold crown mountain range in her left / She is red robe fantasy",
     };
 
     let usedSentences = [];
