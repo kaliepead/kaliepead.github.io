@@ -1,6 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Today, Aries</title>
+</head>
+<body>
+  <h1>Today, Aries (XXXX)</h1>
+  <button id="generateButton">Pull Cards</button>
+  <ul id="result"></ul>
+  <script>
+    const sentences = [
+      "Robe of smile eyes / dual sign roses / and lilies of light / one hand pointed to the sky / the other an infinite magician",
+      "Reversed—breadcrumb conduit / your cloak converted red / blossoming snake bite foliage / and unintentional touch",
+      "You lunar crescent head / embroidered palms / shimmering daughter of Eden / secret borrowed light",
+      "Reversed—surrender the resonate tune / veil of forced feminine perspective / the pomegranates sacred / Persephone ate the underworld",
+      "Beyond Eden / a ripening field of stars / you / borne by a door / gathered in the cluster of words",
+      "Reversed—crushed velvet pomegranate / lush water wheat / rich curves reflect you / an ant resisting the body",
+      "Reversed—Shadow spotlight / crushes / flatters / you are indulged / The audience plays hide and seek.",
+      "You are occult doctrine / nature bridged body / counter temple diffuses skyward blessings",
+      "Reversed—Rebel Permission / three-tiered red temple burning at your feet",
+      "Foreground winged in human figures / Unveiled as earthly body / follied senses / covenant me in secret fall / we were false",
+      "Reversed— Volcanic Angel / A naked page is a fertile landscape / Garden of temptation",
+      "A sword planes and scrolls / A mystery within herself / this is her correspondence",
+      "Reversed — walk back / green light set in motion / no longer brick walled",
+      "Brooding lions jaw / like a light exalted in flowers / no, not a light / a woman",
+      "Reversed— woman’s jaw, stroked by / lions paw / she is collected / and raw",
+      "Illuminated variant / Her beacon is enveloped by her right hand / unconscious mountain lamp / ancient snow-capped light",
+      "Reversed—Have you forgotten / You hold a balanced darkness—haunted mountain range of your chest.",
+      "Scorpion she / flees from Eagle’s eye / Old gods welcome / one / to the underworld.",
+      "Reversed—a choice: this all means something / to both you and / lions paw. It awaits you.",
+      "Choose: loose veil or fair crown / your clothing represents your mantle / you are priestess and poet",
+      "Reversed—choose: the sword or the scales / your symbols represent your situation / either answer is an edge",
+      "Turned upside down / you find a new perspective / bent enlightenment / suspends a halo round your head. Hold back",
+      "Reversed— you leap. Suspended across blue / hanged in time / hit pause / perspective shift / now you are crashing",
+      "Perpetual mourning / the white horse is pulling a carriage / the skeleton is clasping the crude rose / un-birthed / five-petal reflecting being / alive",
+      "Reversed—a boat towers on the horizon / the moon embraces the skeleton child / together they / drift beyond morning",
+      "Winged sun / I speak through the waters / a figure of solar light. We temper / harmonize",
+      "Reversed—background angel / balanced on the mountain / blue robe pours like water round her / puddles at her feet / you are encased",
+      "Look closely / you are linked between / the human / and the garden / chain wings / keep you here",
+      "Reversed—not the shadows but the light / naked flame / bound fantasies",
+      "Fallen Adam / an illustrated analogy / lept from a window / alights / blames the mountain with arms outstretched",
+      "Reversed—Settled mountain / all the leaves have fallen / she no longer has need for time / ask yourself / are you called to begin anew",
+      "She pours radiant light / irrigated by / lesser stars / a bird alights on her figure / which has yewed itself / unfurled into a tree",
+      "Reversed—-The pool rivulets / splits / earthed by a barren vessel / she holds herself against dry vastness",
+      "Unconscious light winds within / the field / this wild pool / howls toward the Moon",
+      "Reversed—Stuck record / skips and scars the wounded / Moon / a wandering / shadow swept within the field",
+      "Sunflower child / dawn is coming home / the darkest night has turned / a horse awaits on the horizon",
+      "Reversed—night child / dawn has arrived",
+      "The characters are rising from their graves / they meet the mountain range / a massive tidal wave restores the underworld",
+      "Reversed—Naked water / the trumpet is calling / force through and rise / like you never saw the mountain range",
+      "Bodies move / purple cloth wrapped around the woman / dancing / her hands are wreathed in laurel / this circular phase",
+      "Reversed—Inside the woman is a world / wrapped in laurel seasons / circular sweetness / she slows / somewhere a door closes",
+      "Innocent blue / most misplace your light step / you are planed as background / an unsurveyed distance / forgotten by the butterfly",
+      "Reversed—-Shadow stage / unfinished play / you are dropped into the sky", "You / Enlisted on a stone thrown / Within a turbulent sea /", "On a bull throne / adorned by vines and mountain lilies / she creates golden eco / systems of mida / her touch / a sceptre", "Golden Fish / Suspended in gravity’s wake / She wears the turbulent sea", "Purple you / Draped in capes of butterflies / Bifurcated moons puncture / clouds / the wind / Has died", "Reversed—Blossoming salamanders / Twisting from their tails / Like tongues /dropped by girls / In flight", "Reversed—she appears / in a reading / draped with veined gold / harsh grapes / her sceptre hands / adorned around / you wrist", "Reversed—It is a ship / Leaping from the waves / You are elsewhere / Sailed in a turbulent sea", "Reversed—the trees can not / Stand beside you / Wind cannot / Whisper in your ear / You are dethroned and / Angels are coming from the clouds", "You / Crowned in / Sunflowers surrounded by / Black cats sprouting from the shadows", "Little rabbit / Carved in the tree / You are cradled in Mother / Nurtured earth / Truncated palms", "Selkies adorned with / Cloudless sky / Your hands cannot touch / scalloped sands / Beneath their skin", "You / infectious sun / beating fields of wheat / she / works within you / drum beats no one hears", "Reversed—Lioness throne / Sunflower shadows /Lesser known darkness / Occult sun", "Reversed—Among the fruited garden / Little rabbit leaps into the cradle / Sleeps / While the garden is overrun / Luscious rot intertwined", "Reversed—wrapped between / Land and sea / she drinks the sky", "Reversed—A stone cherub / drifts through the clouds / holds a butterfly by / it’s sky wing / on the horizon / an atmospheric turn / sucks stratus back to earth", "Barren Mountains / this arid beast rising on its toes / She holds the key / This thing that transmutates / Dry desert / Becoming / River high", "Her hands a field / Tilled and waiting / eyes on the quilted horizon / Punctuates the harvest with / Her gaze", "Familiar lands make home in your chest / your heart a body of water / pinpoint mapped and fish / are swirling around each other / this journey / this arrival / this homecoming", "Birds tossed in the wind / Storm clouds brewing around them this / Mist battle against the wing", "Reversed—Red plume on the horizon / both a fire / And a horses mane", "Reversed—Frozen hands / Stationary body in a field / Rows consume both background / And you", "Reversed—Barren river / trees bend in slow light / water rises till / tendrils drowning / mud retracting / they fold themselves into paper / sirens / unroot themselves / to make way for riptides and dark water", "Reversed—A sword is here / In her hand / Bending trees around her wrists / This melting wind / A storm within your chest", "Sprouting young green / leaves become focal / shading in earth hues / the mountain tops no longer barren gray / it lifts from the spine / altered background now / landscape on a page", "She blooms in harvest fields / near flower hills / grassy streams / she is sweetened windfall / you lose yourself within this night / industrial noise slipping through the cracks", "Poet / curious mind / between the decks are endings / you pretend / to understand / these floral waves / these exploding waterfalls / let go / nature is flowing", "Page in the breeze / sworded language flashes in the sky / the clouds are upwards / a direction the body can travel", "Reversed—the other hand a void / no play for the stage of the body / light seeds within you / emerges a sun", "Reversed—field of trees / wide in all their standing / flowered trunks crusting in the heat / harvest plenty / scythes stalk and bite", "Reversed—Enveloped sea / you are waved in tunic blue / between the crest and / the crestfallen / here / a pause / the shore is waiting", "Reversed—You are on the rooftops / a turbulent precipice for shouting / this is where you see them / within the tossed trees / a windblown other", 
+    ];
+
+    const dependencies = {
+      "Robe of smile eyes / dual sign roses / and lilies of light / one hand pointed to the sky / the other an infinite magician": "Reversed—breadcrumb conduit / your cloak converted red / blossoming snake bite foliage / and unintentional touch",
+      "Reversed—breadcrumb conduit / your cloak converted red / blossoming snake bite foliage / and unintentional touch": "Robe of smile eyes / dual sign roses / and lilies of light / one hand pointed to the sky / the other an infinite magician",
+      "You lunar crescent head / embroidered palms / shimmering daughter of Eden / secret borrowed light": "Reversed—surrender the resonate tune / veil of forced feminine perspective / the pomegranates sacred / Persephone ate the underworld",
+      "Reversed—surrender the resonate tune / veil of forced feminine perspective / the pomegranates sacred / Persephone ate the underworld": "You lunar crescent head / embroidered palms / shimmering daughter of Eden / secret borrowed light",
+      "Beyond Eden / a ripening field of stars / you / borne by a door / gathered in the cluster of words": "Reversed—crushed velvet pomegranate / lush water wheat / rich curves reflect you / an ant resisting the body",
+      "Reversed—crushed velvet pomegranate / lush water wheat / rich curves reflect you / an ant resisting the body": "Beyond Eden / a ripening field of stars / you / borne by a door / gathered in the cluster of words",
+      "Mother / Mars adorned / small river in her right hand / gold crown mountain range in her left / She is red robe fantasy": "Reversed—Shadow spotlight / crushes / flatters / you are indulged / The audience plays hide and seek.",
+      "Reversed—Shadow spotlight / crushes / flatters / you are indulged / The audience plays hide and seek.": "Mother / Mars adorned / small river in her right hand / gold crown mountain range in her left / She is red robe fantasy",
+      "You are occult doctrine / nature bridged body / counter temple diffuses skyward blessings":"Reversed—Rebel Permission / three-tiered red temple burning at your feet",
+      "Reversed—Rebel Permission / three-tiered red temple burning at your feet":"You are occult doctrine / nature bridged body / counter temple diffuses skyward blessings",
+      "Foreground winged in human figures / Unveiled as earthly body / follied senses / covenant me in secret fall / we were false":"Reversed— Volcanic Angel / A naked page is a fertile landscape / Garden of temptation",
+      "Reversed— Volcanic Angel / A naked page is a fertile landscape / Garden of temptation":"Foreground winged in human figures / Unveiled as earthly body / follied senses / covenant me in secret fall / we were false",
+      "A sword planes and scrolls / A mystery within herself / this is her correspondence":"Reversed — walk back / green light set in motion / no longer brick walled",
+      "Reversed — walk back / green light set in motion / no longer brick walled":"A sword planes and scrolls / A mystery within herself / this is her correspondence",
+      "Brooding lions jaw / like a light exalted in flowers / no, not a light / a woman":"Reversed— woman’s jaw, stroked by / lions paw / she is collected / and raw",
+      "Reversed— woman’s jaw, stroked by / lions paw / she is collected / and raw":"Brooding lions jaw / like a light exalted in flowers / no, not a light / a woman",
+      "Illuminated variant / Her beacon is enveloped by her right hand / unconscious mountain lamp / ancient snow-capped light":"Reversed—Have you forgotten / You hold a balanced darkness—haunted mountain range of your chest.",
+      "Reversed—Have you forgotten / You hold a balanced darkness—haunted mountain range of your chest.":"Illuminated variant / Her beacon is enveloped by her right hand / unconscious mountain lamp / ancient snow-capped light",
+      "Scorpion she / flees from Eagle’s eye / Old gods welcome / one / to the underworld.": "Reversed—a choice: this all means something / to both you and / lions paw. It awaits you.",
+      "Reversed—a choice: this all means something / to both you and / lions paw. It awaits you.":"Scorpion she / flees from Eagle’s eye / Old gods welcome / one / to the underworld.",
+      "Choose: loose veil or fair crown / your clothing represents your mantle / you are priestess and poet":"Reversed—choose: the sword or the scales / your symbols represent your situation / either answer is an edge",
+      "Reversed—choose: the sword or the scales / your symbols represent your situation / either answer is an edge":"Choose: loose veil or fair crown / your clothing represents your mantle / you are priestess and poet",
+      "Turned upside down / you find a new perspective / bent enlightenment / suspends a halo round your head. Hold back":"Reversed— you leap. Suspended across blue / hanged in time / hit pause / perspective shift / now you are crashing",
+      "Reversed— you leap. Suspended across blue / hanged in time / hit pause / perspective shift / now you are crashing":"Turned upside down / you find a new perspective / bent enlightenment / suspends a halo round your head. Hold back",
+      "Perpetual mourning / the white horse is pulling a carriage / the skeleton is clasping the crude rose / un-birthed / five-petal reflecting being / alive":"Reversed—a boat towers on the horizon / the moon embraces the skeleton child / together they / drift beyond morning",
+      "Reversed—a boat towers on the horizon / the moon embraces the skeleton child / together they / drift beyond morning":"Perpetual mourning / the white horse is pulling a carriage / the skeleton is clasping the crude rose / un-birthed / five-petal reflecting being / alive",
+      "Winged sun / I speak through the waters / a figure of solar light. We temper / harmonize":"Reversed—background angel / balanced on the mountain / blue robe pours like water round her / puddles at her feet / you are encased",
+      "Reversed—background angel / balanced on the mountain / blue robe pours like water round her / puddles at her feet / you are encased":"Winged sun / I speak through the waters / a figure of solar light. We temper / harmonize",
+      "Look closely / you are linked between / the human / and the garden / chain wings / keep you here":"Reversed—not the shadows but the light / naked flame / bound fantasies",
+      "Reversed—not the shadows but the light / naked flame / bound fantasies":"Look closely / you are linked between / the human / and the garden / chain wings / keep you here",
+      "Fallen Adam / an illustrated analogy / lept from a window / alights / blames the mountain with arms outstretched":"Reversed—Settled mountain / all the leaves have fallen / she no longer has need for time / ask yourself / are you called to begin anew",
+      "Reversed—Settled mountain / all the leaves have fallen / she no longer has need for time / ask yourself / are you called to begin anew":"Fallen Adam / an illustrated analogy / lept from a window / alights / blames the mountain with arms outstretched",
+      "She pours radiant light / irrigated by / lesser stars / a bird alights on her figure / which has yewed itself / unfurled into a tree":"Reversed—-The pool rivulets / splits / earthed by a barren vessel / she holds herself against dry vastness",
+      "Reversed—-The pool rivulets / splits / earthed by a barren vessel / she holds herself against dry vastness":"She pours radiant light / irrigated by / lesser stars / a bird alights on her figure / which has yewed itself / unfurled into a tree",
+      "Unconscious light winds within / the field / this wild pool / howls toward the Moon":"Reversed—Stuck record / skips and scars the wounded / Moon / a wandering / shadow swept within the field",
+      "Reversed—Stuck record / skips and scars the wounded / Moon / a wandering / shadow swept within the field":"Unconscious light winds within / the field / this wild pool / howls toward the Moon",
+      "Sunflower child / dawn is coming home / the darkest night has turned / a horse awaits on the horizon":"Reversed—night child / dawn has arrived",
+      "Reversed—night child / dawn has arrived":"Sunflower child / dawn is coming home / the darkest night has turned / a horse awaits on the horizon",
+      "The characters are rising from their graves / they meet the mountain range / a massive tidal wave restores the underworld":"Reversed—Naked water / the trumpet is calling / force through and rise / like you never saw the mountain range",
+      "Reversed—Naked water / the trumpet is calling / force through and rise / like you never saw the mountain range":"The characters are rising from their graves / they meet the mountain range / a massive tidal wave restores the underworld",
+      "Bodies move / purple cloth wrapped around the woman / dancing / her hands are wreathed in laurel / this circular phase":"Reversed—Inside the woman is a world / wrapped in laurel seasons / circular sweetness / she slows / somewhere a door closes",
+      "Reversed—Inside the woman is a world / wrapped in laurel seasons / circular sweetness / she slows / somewhere a door closes":"Bodies move / purple cloth wrapped around the woman / dancing / her hands are wreathed in laurel / this circular phase",
+      "Innocent blue / most misplace your light step / you are planed as background / an unsurveyed distance / forgotten by the butterfly":"Reversed—-Shadow stage / unfinished play / you are dropped into the sky",
+      "Reversed—-Shadow stage / unfinished play / you are dropped into the sky":"Innocent blue / most misplace your light step / you are planed as background / an unsurveyed distance / forgotten by the butterfly", "You / Enlisted on a stone thrown / Within a turbulent sea" : "Reversed—Blossoming salamanders / Twisting from their tails / Like tongues /dropped by girls / In flight", "Reversed—Blossoming salamanders / Twisting from their tails / Like tongues /dropped by girls / In flight" : "You / Enlisted on a stone thrown / Within a turbulent sea", "On a bull throne / adorned by vines and mountain lilies / she creates golden eco / systems of mida / her touch / a sceptre" : "Reversed—she appears / in a reading / draped with veined gold / harsh grapes / her sceptre hands / adorned around / you wrist", "On a bull throne / adorned by vines and mountain lilies / she creates golden eco / systems of mida / her touch / a sceptre" : "Reversed—she appears / in a reading / draped with veined gold / harsh grapes / her sceptre hands / adorned around / you wrist", "Golden Fish / Suspended in gravity’s wake / She wears the turbulent sea" : "Reversed—It is a ship / Leaping from the waves / You are elsewhere / Sailed in a turbulent sea", "Reversed—It is a ship / Leaping from the waves / You are elsewhere / Sailed in a turbulent sea" : "Golden Fish / Suspended in gravity’s wake / She wears the turbulent sea", "Purple you / Draped in capes of butterflies / Bifurcated moons puncture / clouds / the wind / Has died" : "Reversed—the trees can not / Stand beside you / Wind cannot / Whisper in your ear / You are dethroned and / Angels are coming from the clouds", "Reversed—the trees can not / Stand beside you / Wind cannot / Whisper in your ear / You are dethroned and / Angels are coming from the clouds" : "Purple you / Draped in capes of butterflies / Bifurcated moons puncture / clouds / the wind / Has died", "You / Crowned in / Sunflowers surrounded by / Black cats sprouting from the shadows" : "Reversed—Lioness throne / Sunflower shadows /Lesser known darkness / Occult sun", "Reversed—Lioness throne / Sunflower shadows /Lesser known darkness / Occult sun" : "You / Crowned in / Sunflowers surrounded by / Black cats sprouting from the shadows", "Little rabbit / Carved in the tree / You are cradled in Mother / Nurtured earth / Truncated palms" : "Reversed—Among the fruited garden / Little rabbit leaps into the cradle / Sleeps / While the garden is overrun / Luscious rot intertwined", "Reversed—Among the fruited garden / Little rabbit leaps into the cradle / Sleeps / While the garden is overrun / Luscious rot intertwined" : "Little rabbit / Carved in the tree / You are cradled in Mother / Nurtured earth / Truncated palms", "Selkies adorned with / Cloudless sky / Your hands cannot touch / scalloped sands / Beneath their skin" : "Reversed—wrapped between / Land and sea / she drinks the sky", "Reversed—wrapped between / Land and sea / she drinks the sky" : "Selkies adorned with / Cloudless sky / Your hands cannot touch / scalloped sands / Beneath their skin", "You / infectious sun / beating fields of wheat / she / works within you / drum beats no one hears" : "Reversed—A stone cherub / drifts through the clouds / holds a butterfly by / it’s sky wing / on the horizon / an atmospheric turn / sucks stratus back to earth", "Reversed—A stone cherub / drifts through the clouds / holds a butterfly by / it’s sky wing / on the horizon / an atmospheric turn / sucks stratus back to earth" : "You / infectious sun / beating fields of wheat / she / works within you / drum beats no one hears", "Barren Mountains / this arid beast rising on its toes / She holds the key / This thing that transmutates / Dry desert / Becoming / River high" : "Reversed—Red plume on the horizon / both a fire / And a horses mane", "Reversed—Red plume on the horizon / both a fire / And a horses mane" : "Barren Mountains / this arid beast rising on its toes / She holds the key / This thing that transmutates / Dry desert / Becoming / River high", "Her hands a field / Tilled and waiting / eyes on the quilted horizon / Punctuates the harvest with / Her gaze" : "Reversed—Frozen hands / Stationary body in a field / Rows consume both background / And you", "Reversed—Frozen hands / Stationary body in a field / Rows consume both background / And you" : "Her hands a field / Tilled and waiting / eyes on the quilted horizon / Punctuates the harvest with / Her gaze", "Familiar lands make home in your chest / your heart a body of water / pinpoint mapped and fish / are swirling around each other / this journey / this arrival / this homecoming" : "Reversed—Barren river / trees bend in slow light / water rises till / tendrils drowning / mud retracting / they fold themselves into paper / sirens / unroot themselves / to make way for riptides and dark water", "Reversed—Barren river / trees bend in slow light / water rises till / tendrils drowning / mud retracting / they fold themselves into paper / sirens / unroot themselves / to make way for riptides and dark water" : "Familiar lands make home in your chest / your heart a body of water / pinpoint mapped and fish / are swirling around each other / this journey / this arrival / this homecoming", "Birds tossed in the wind / Storm clouds brewing around them this / Mist battle against the wing" : "Reversed—A sword is here / In her hand / Bending trees around her wrists / This melting wind / A storm within your chest", "Reversed—A sword is here / In her hand / Bending trees around her wrists / This melting wind / A storm within your chest" : "Birds tossed in the wind / Storm clouds brewing around them this / Mist battle against the wing", "Sprouting young green / leaves become focal / shading in earth hues / the mountain tops no longer barren gray / it lifts from the spine / altered background now / landscape on a page" : "Reversed—the other hand a void / no play for the stage of the body / light seeds within you / emerges a sun", "Reversed—the other hand a void / no play for the stage of the body / light seeds within you / emerges a sun" : "Sprouting young green / leaves become focal / shading in earth hues / the mountain tops no longer barren gray / it lifts from the spine / altered background now / landscape on a page", "She blooms in harvest fields / near flower hills / grassy streams / she is sweetened windfall / you lose yourself within this night / industrial noise slipping through the cracks" : "Reversed—field of trees / wide in all their standing / flowered trunks crusting in the heat / harvest plenty / scythes stalk and bite", "Reversed—field of trees / wide in all their standing / flowered trunks crusting in the heat / harvest plenty / scythes stalk and bite": "She blooms in harvest fields / near flower hills / grassy streams / she is sweetened windfall / you lose yourself within this night / industrial noise slipping through the cracks", "Poet / curious mind / between the decks are endings / you pretend / to understand / these floral waves / these exploding waterfalls / let go / nature is flowing" : "Reversed—Enveloped sea / you are waved in tunic blue / between the crest and / the crestfallen / here / a pause / the shore is waiting", "Reversed—Enveloped sea / you are waved in tunic blue / between the crest and / the crestfallen / here / a pause / the shore is waiting" : "Poet / curious mind / between the decks are endings / you pretend / to understand / these floral waves / these exploding waterfalls / let go / nature is flowing", "Page in the breeze / sworded language flashes in the sky / the clouds are upwards / a direction the body can travel" : "Reversed—You are on the rooftops / a turbulent precipice for shouting / this is where you see them / within the tossed trees / a windblown other", "Reversed—You are on the rooftops / a turbulent precipice for shouting / this is where you see them / within the tossed trees / a windblown other" : "Page in the breeze / sworded language flashes in the sky / the clouds are upwards / a direction the body can travel",  
+    };
+
+    let usedSentences1 = [];
+    let currentIteration1 = 0;
+
+    function generateSentences() {
+      let iterationSentences = sentences.map(sentence => `${sentence}-${currentIteration1}`);
+
+      let candidates = iterationSentences.filter((sentence) => !usedSentences1.includes(sentence));
+      let selected = [];
+
+      for (let i = 0; i < 3; i++) {
+        let idx = Math.floor(Math.random() * candidates.length);
+        let sentence = candidates[idx];
+        let originalSentence = sentence.slice(0, -(`-${currentIteration1}`.length));
+        selected.push(originalSentence);
+        candidates.splice(idx, 1);
+
+        let dependency = dependencies[originalSentence];
+        if (dependency) {
+          let dependentSentence = `${dependency}-${currentIteration1}`;
+          candidates = candidates.filter((s) => s !== dependentSentence);
+          usedSentences1.push(dependentSentence);
+        }
+      }
+
+      usedSentences1 = usedSentences1.concat(selected.map(sentence => `${sentence}-${currentIteration1}`));
+      return selected;
+    }
+
+    document.querySelector("#generateButton").addEventListener("click", function () {
+      let sentences = generateSentences();
+      let result = document.querySelector("#result");
+      result.innerHTML = "";
+      sentences.forEach(function (sentence) {
+        let li = document.createElement("li");
+        li.textContent = sentence;
+        result.appendChild(li);
+      });
+
+      currentIteration1 = (currentIteration1 + 1) % sentences.length;
+      usedSentences1 = usedSentences1.filter(sentence => sentence.endsWith(`-${currentIteration1 - 1}`));
+    });
+  </script>
+</body>
+</html>
+
+</body>
+</html>
+
+
+
+<!--Original
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,3 +186,4 @@
     </script>
 </body>
 </html>
+-->
