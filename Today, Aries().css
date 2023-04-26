@@ -5,7 +5,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position-x: center;
-    background-position-y: 35px;
+    background-position-y: center;
 
 }
 
@@ -16,7 +16,7 @@ h1{
 }
 ul {
     list-style-type: none;
-    line-height: 24pt;
+    line-height: 18pt;
     font-size: 12pt;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -49,16 +49,14 @@ width: 400px;
 }
 
 #rContainer{
-    text-align: center;
+text-align: center;
 
-
-}
-div {
-    text-align: center;
 }
 #result{
-    padding-top: 80px;
-    position: absolute;
+    display: inline-block;
+    width: 210px;
+    margin: 200px, 0px, 0px, 0px;
+ 
 
 }
 #btn{

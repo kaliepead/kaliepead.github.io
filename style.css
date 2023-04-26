@@ -5,9 +5,13 @@ body{
   background-repeat: no-repeat;
   background-color: #0E1F1C;
 }
+#wrapper{
+display:inline-block;
+position: absolute;
+margin: 150px 0px 0px 0px;
+}
 .button{
   font-family: 'poiret one', sans-serif;
-  display: relative;
   color: white;
   background-color: #0E1F1C;
   padding: 10px;
