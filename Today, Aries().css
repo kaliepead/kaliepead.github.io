@@ -1,29 +1,70 @@
 body {
-    background-color: #024440;
+    background-color: white;
+    background-image: url(./Assets/Today\ Aries\ Background.png);
+    background-size: 70vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position-x: center;
+    background-position-y: 35px;
+
+}
+
+h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20pt;
+    margin-bottom: 40px;
+}
+ul {
+    list-style-type: none;
+    line-height: 24pt;
+    font-size: 12pt;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .image-container img{
-box-sizing: border-box
+box-sizing: border-box;
 height: auto;
 width: 400px;
 }
 
-.btn {
+#generateButton {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
-    align-items: center;
-    height: 20px;
-    width: 120px;
-    font-size: 12px;
-    border-radius: 12px;
-    border-color: #024440;
-    border-style:double;
-    background-color: #E9DCe0;
+    height: 30px;
+    width: 130px;
+    font-size: 20px;
+    border-radius: 20px;
+    border-color: white;
+    background-color: #02322f;
+    justify-content: center;
+    color: white;
+
+}
+#container {
+    text-align: center;
+
 }
 
+#hContainer{
+    text-align: center;
+}
+
+#rContainer{
+    text-align: center;
+
+
+}
+div {
+    text-align: center;
+}
+#result{
+    padding-top: 80px;
+    position: absolute;
+
+}
 #btn{
     position: absolute;
-    top: 65px;
-    left: 150px;
+    padding-left: 50%;
+
 }
 
 
